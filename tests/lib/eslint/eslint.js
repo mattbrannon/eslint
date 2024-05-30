@@ -926,7 +926,7 @@ describe("ESLint", () => {
         });
     });
 
-    describe("lintFiles()", () => {
+    describe.only("lintFiles()", () => {
 
         /** @type {InstanceType<import("../../../lib/eslint").ESLint>} */
         let eslint;
