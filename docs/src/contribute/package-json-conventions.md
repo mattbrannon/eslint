@@ -38,7 +38,7 @@ With the exception of [npm life cycle scripts](https://docs.npmjs.com/cli/v8/usi
 
 Scripts that generate a set of files from source code and / or data MUST have names that begin with `build`.
 
-If a package contains any `build:*` scripts, there MAY be a script named `build`. If so, SHOULD produce the same output as running each of the `build` scripts individually. It MUST produce a subset of the output from running those scripts.
+If a package contains any `build:*` scripts, there MAY be a script named `build`. If so, it SHOULD produce the same output as running each of the `build` scripts individually. It MUST produce a subset of the output from running those scripts.
 
 ### Fetch
 
@@ -60,13 +60,13 @@ If fixing is available, a linter MUST NOT apply fixes UNLESS the script contains
 
 ### Start
 
-A `start` script is used to start a server. As of this writing, no ESLint package has more than one `start` script, so there's no need `start` to have any modifiers.
+A `start` script is used to start a server. As of this writing, no ESLint package has more than one `start` script, so there's no need for `start` to have any modifiers.
 
 ### Test
 
 Scripts that execute code in order to ensure the actual behavior matches expected behavior MUST have names that begin with `test`.
 
-If a package contains any `test:*` scripts, there SHOULD be a script named `test` and it MUST run of all of the tests that would have been run if each `test:*` script was called individually.
+If a package contains any `test:*` scripts, there SHOULD be a script named `test` and it MUST run all of the tests that would have been run if each `test:*` script was called individually.
 
 A test script SHOULD NOT include linting.
 
@@ -86,7 +86,7 @@ The name of the target of the action being run. In the case of a `build` script,
 
 A target MAY refer to a list of affected file extensions (such as `cjs` or `less`) delimited by a `+`. If there is more than one extension, the list SHOULD be alphabetized. When a file extension has variants (such as `cjs` for CommonJS and `mjs` for ESM), the common part of the extension MAY be used instead of explicitly listing out all of the variants (e.g. `js` instead of `cjs+jsx+mjs`).
 
-The target SHOULD NOT refer to name of the name of the tool that's performing the action (`eleventy`, `webpack`, etc.)
+The target SHOULD NOT refer to the name of the tool that's performing the action (`eleventy`, `webpack`, etc.)
 
 ### Options
 
